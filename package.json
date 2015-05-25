@@ -11,7 +11,7 @@
     "commonform-serve-leveldb": "./bin/commonform-serve-leveldb"
   },
   "bugs": {
-    "url": "https://github.com/commonform/commonform-serve-leveldb.js/issues"
+    "url": "https://github.com/commonform/commonform-serve-leveldb/issues"
   },
   "dependencies": {
     "docopt": "^0.6.2"
@@ -21,13 +21,13 @@
     "jscs": "^1.13.1",
     "jshint": "^2.7.0"
   },
-  "homepage": "https://github.com/commonform/commonform-serve-leveldb.js",
+  "homepage": "https://github.com/commonform/commonform-serve-leveldb",
   "keywords": [],
   "license": "Apache-2.0",
   "main": "source/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/commonform/commonform-serve-leveldb.js.git"
+    "url": "git+https://github.com/commonform/commonform-serve-leveldb.git"
   },
   "scripts": {
     "lint": "fixpack && jshint source && jscs source",
