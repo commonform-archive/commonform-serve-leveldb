@@ -1,0 +1,5 @@
+Serve Common Forms over HTTP from a LevelDB store.
+
+Usage:
+  commonform-serve-leveldb --help | -h
+  commonform-serve-leveldb --version | -v
