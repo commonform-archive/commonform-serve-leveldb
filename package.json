@@ -14,7 +14,11 @@
     "url": "https://github.com/commonform/commonform-serve-leveldb/issues"
   },
   "dependencies": {
-    "docopt": "^0.6.2"
+    "bole": "^2.0.0",
+    "commonform-serve": "^0.2.1",
+    "docopt": "^0.6.2",
+    "leveldown": "^1.0.6",
+    "levelup": "^1.1.0"
   },
   "devDependencies": {
     "fixpack": "^2.2.0",

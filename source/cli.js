@@ -1,6 +1,12 @@
+var bole = require('bole');
 var docopt = require('docopt');
 var fs = require('fs');
+var http = require('http');
+var leveldown = require('leveldown');
+var levelup = require('levelup');
+var meta = require('../package');
 var path = require('path');
+var serve = require('commonform-serve');
 
 var meta = require('../package.json');
 var usage = fs.readFileSync(path.join(__dirname, 'usage.txt'))
@@ -15,7 +21,7 @@ module.exports = function(stdin, stdout, stderr, env, argv, callback) {
       exit: false
     });
   } catch (error) {
-    stderr.write(error.message);
+    stderr.write(error.message + '\n');
     callback(1);
     return;
   }
@@ -26,6 +32,16 @@ module.exports = function(stdin, stdout, stderr, env, argv, callback) {
     stdout.write(usage + '\n');
     callback(0);
   } else {
-    throw new Error();
+    var path = options['--data-path'];
+    var port = options['--port'];
+    var level = levelup(path, {db: leveldown});
+    bole.output({level: 'debug', stream: process.stdout});
+    var logger = bole(meta.name + ' ' + meta.version);
+    http.createServer(serve(logger, level))
+      .on('listening', function() {
+        logger.info({port: this.address().port});
+        logger.info({data: path});
+      })
+      .listen(port);
   }
 };

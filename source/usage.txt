@@ -1,5 +1,10 @@
 Serve Common Forms over HTTP from a LevelDB store.
 
 Usage:
+  commonform-serve-leveldb [options]
   commonform-serve-leveldb --help | -h
   commonform-serve-leveldb --version | -v
+
+Options:
+  -d PATH, --data-path PATH  LevelDB data path [default: .commonform]
+  -p PORT, --port PORT       HTTP server port [default: 8080]
