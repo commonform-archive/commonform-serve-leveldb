@@ -7,11 +7,7 @@ commonform-serve-leveldb
 
 Serve Common Forms over HTTP from a LevelDB store.
 
-<!-- js
-  // The examples below are run as tests.
-  var commonformServeLeveldb = require('./');
--->
-
-```js
-typeof commonformServeLeveldb; // => 'function'
+```bash
+npm install --global commonform-serve-leveldb
+commonform-serve-leveldb --help
 ```

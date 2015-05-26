@@ -4,13 +4,12 @@ var fs = require('fs');
 var http = require('http');
 var leveldown = require('leveldown');
 var levelup = require('levelup');
-var meta = require('../package');
 var path = require('path');
 var serve = require('commonform-serve');
 
-var meta = require('../package.json');
-var usage = fs.readFileSync(path.join(__dirname, 'usage.txt'))
-  .toString();
+var meta = require('../package');
+var usage = fs.readFileSync(path.join(__dirname, 'usage')).toString();
+var versionString = meta.name + ' ' + meta.version;
 
 module.exports = function(stdin, stdout, stderr, env, argv, callback) {
   var options;
@@ -26,7 +25,7 @@ module.exports = function(stdin, stdout, stderr, env, argv, callback) {
     return;
   }
   if (options['--version'] || options['-v']) {
-    stdout.write(meta.name + ' ' + meta.version + '\n');
+    stdout.write(versionString + '\n');
     callback(0);
   } else if (options['--help'] || options['-h']) {
     stdout.write(usage + '\n');
@@ -36,7 +35,7 @@ module.exports = function(stdin, stdout, stderr, env, argv, callback) {
     var port = options['--port'];
     var level = levelup(path, {db: leveldown});
     bole.output({level: 'debug', stream: process.stdout});
-    var logger = bole(meta.name + ' ' + meta.version);
+    var logger = bole(versionString);
     http.createServer(serve(logger, level))
       .on('listening', function() {
         logger.info({port: this.address().port});
