@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "bole": "^2.0.0",
-    "commonform-serve": "^0.2.1",
+    "commonform-serve": "0.3.x",
     "docopt": "^0.6.2",
     "leveldown": "^1.0.6",
     "levelup": "^1.1.0"
