@@ -14,16 +14,16 @@
     "url": "https://github.com/commonform/commonform-serve-leveldb/issues"
   },
   "dependencies": {
-    "bole": "^2.0.0",
+    "bole": "2.x",
     "commonform-serve": "0.3.x",
-    "docopt": "^0.6.2",
-    "leveldown": "^1.0.6",
-    "levelup": "^1.1.0"
+    "docopt": "0.6.x",
+    "leveldown": "1.x",
+    "levelup": "1.x"
   },
   "devDependencies": {
-    "fixpack": "^2.2.0",
-    "jscs": "^1.13.1",
-    "jshint": "^2.7.0"
+    "fixpack": "2.x",
+    "jscs": "1.x",
+    "jshint": "2.x"
   },
   "homepage": "https://github.com/commonform/commonform-serve-leveldb",
   "keywords": [
