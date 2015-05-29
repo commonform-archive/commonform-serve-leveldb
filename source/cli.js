@@ -31,15 +31,15 @@ module.exports = function(stdin, stdout, stderr, env, argv, callback) {
     stdout.write(usage + '\n');
     callback(0);
   } else {
-    var path = options['--data-path'];
+    var dataPath = options['--data-path'];
     var port = options['--port'];
-    var level = levelup(path, {db: leveldown});
+    var level = levelup(dataPath, {db: leveldown});
     bole.output({level: 'debug', stream: process.stdout});
     var logger = bole(versionString);
     http.createServer(serve(logger, level))
       .on('listening', function() {
         logger.info({port: this.address().port});
-        logger.info({data: path});
+        logger.info({data: dataPath});
       })
       .listen(port);
   }
