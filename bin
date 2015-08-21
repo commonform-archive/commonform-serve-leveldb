@@ -6,6 +6,4 @@ require('./cli')(
   process.env,
   process.argv.slice(2),
   function(status) {
-    process.exit(status);
-  }
-);
+    process.exit(status) })
