@@ -27,7 +27,6 @@
     "law"
   ],
   "license": "Apache-2.0",
-  "main": "source/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/commonform/commonform-serve-leveldb.git"
