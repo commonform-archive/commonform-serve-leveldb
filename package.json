@@ -1,7 +1,7 @@
 {
   "name": "commonform-serve-leveldb",
   "description": "serve Common Forms over HTTP from a LevelDB store",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "bin": "bin",
   "dependencies": {
