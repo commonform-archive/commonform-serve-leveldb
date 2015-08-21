@@ -7,7 +7,7 @@ var levelup = require('levelup')
 var path = require('path')
 var serve = require('commonform-serve')
 
-var meta = require('../package')
+var meta = require('./package')
 var usage = fs.readFileSync(path.join(__dirname, 'usage')).toString()
 var versionString = ( meta.name + ' ' + meta.version )
 
