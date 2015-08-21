@@ -7,9 +7,7 @@
     "email": "kyle@kemitchell.com",
     "url": "http://kemitchell.com"
   },
-  "bin": {
-    "commonform-serve-leveldb": "./bin/commonform-serve-leveldb"
-  },
+  "bin": "bin",
   "bugs": {
     "url": "https://github.com/commonform/commonform-serve-leveldb/issues"
   },
